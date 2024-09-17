@@ -9,6 +9,23 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
         <style>
+        .navbar {
+            position: relative;
+            margin: 1px;
+        }
+
+        .video-bg {
+            display: flex;
+            position: absolute;
+            object-fit: cover;
+            width: 90%;
+            height: 100%;
+            top: 0%;
+            left: 5%;
+            right: 5%;
+            bottom: 0%;
+            z-index: -1;
+        }
             /* SECTION TWO */
             #searchbutton{
                 padding: 3px 8px 3px 8px;
@@ -60,30 +77,11 @@
                 justify-content: space-between;
                 align-content: center;
                 padding: 10px 5px 30px 5px ;
-
-                
             }
-
             .navbar {
                 width: 100%;
                 height: 120px;
                 align-content: center;
-                /* background-image: url(./hero.jpg);
-                object-fit: cover;
-                background-size: 100% 100%;
-                background-repeat: no-repeat; */
-            }
-            .video-bg {
-                display: flex; 
-                position: relative;
-                width: 90%;
-                height: 100%;
-                background-size: cover;
-                top: 0%;
-                left: 5%;
-                right: 5%;
-                bottom: 0%;
-                z-index: -1;
             }
             ul {
                 display: flex;
@@ -613,14 +611,18 @@
                     <ul class="navbar-links">
                         <!-- <input type="checkbox" class="menu-toggle"> -->
                         <!-- <label for="#nav" class="menu-icon">&#9776;</label> -->
-                        <li><a href="catalogzPhotos.html" id="photos">Photos</a></li>
-                        <li><a href="catalogzVideos.html" id="videos">Videos</a></li>
-                        <li><a href="catalogzAbout.html" id="about">About</a></li>
-                        <li><a href="catalogzContact.html" id="contact">Contact</a></li>
+                        <li><a href="catalogzPhotos.html"
+                                id="photos">Photos</a></li>
+                        <li><a href="catalogzVideos.html"
+                                id="videos">Videos</a></li>
+                        <li><a href="catalogzAbout.html"
+                                id="about">About</a></li>
+                        <li><a href="catalogzContact.html"
+                                id="contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="navbar">
-                    <form  class="d-flex" role="search">
+                    <form class="d-flex" role="search">
                         <input class="input" type="search" placeholder="Search"
                             aria-label="Search" id="searchbutton">
                         <button class="btn" type="submit" id="searchbutton"><i
@@ -637,7 +639,8 @@
                     <h1 id="blue">Latest Videos</h1>
                 </div>
                 <div>
-                    <p id="blue">Page <a href="nannap.html"><button id="buttonnumber" type="button">1</button></a>
+                    <p id="blue">Page <a href="nannap.html"><button
+                                id="buttonnumber" type="button">1</button></a>
                         of 180</p>
                 </div>
             </section>
@@ -757,17 +760,24 @@
             </section>
             <section id="sectiontwo">
                 <div>
-                    <a href="nannap.html"><button type="button" id="button">Previous</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="button">Previous</button></a>
                 </div>
                 <div>
-                    <a href="nannap.html"><button type="button" id="buttonnumber">1</button></a>
-                    <a href="nannap.html"><button type="button" id="buttonnumber">2</button></a>
-                    <a href="nannap.html"><button type="button" id="buttonnumber">3</button></a>
-                    <a href="nannap.html"><button type="button" id="buttonnumber">4</button></a>
-                    <a href="nannap.html"><button type="button" id="buttonnumber">5</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">1</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">2</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">3</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">4</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">5</button></a>
                 </div>
                 <div>
-                    <a href="nannap.html"><button type="button" id="buttonn">Next</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonn">Next</button></a>
                 </div>
             </section>
         </main>
