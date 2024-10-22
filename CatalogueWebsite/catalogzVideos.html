@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="catalogz.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <style>
+        .navbar {
+            position: relative;
+            margin: 1px;
+        }
+
+        .video-bg {
+            display: flex;
+            position: absolute;
+            object-fit: cover;
+            width: 90%;
+            height: 100%;
+            top: 0%;
+            left: 5%;
+            right: 5%;
+            bottom: 0%;
+            z-index: -1;
+        }
+            /* SECTION TWO */
+            #searchbutton{
+                padding: 3px 8px 3px 8px;
+                border: 2px solid black;
+                color: black;
+            }
+            #searchbuttonicon{
+                padding: 3px 8px 3px 8px;
+                border: 2px solid black;
+                color: black;
+            }
+            #sectiontwo{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 30px;
+            }
+            #buttonnumber{
+                padding: 3px 8px 3px 8px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            #button{
+                padding: 3px 8px 3px 8px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            #buttonn{
+                padding: 3px 20px 3px 20px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            img{
+                border: 1px solid black;
+            }
+        /* MOBILE */
+        @media screen and (min-width:200px)and (max-width:581px) {
+            /* Header */
+            .nav {
+                width: 100%;
+                height: 100%;
+            }
+            .catalog {
+                width: 100%;
+                height: 10px; 
+                display: flex;
+                justify-content: space-between;
+                align-content: center;
+                padding: 10px 5px 30px 5px ;
+            }
+            .navbar {
+                width: 100%;
+                height: 120px;
+                align-content: center;
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            /* MAIN */
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+            }
+
+            section div {    
+                margin: 2px;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+            /* SECTION TWO */
+            #searchbutton{
+                padding: 3px 8px 3px 8px;
+                border: 2px solid black;
+                color: black;
+            }
+            #searchbuttonicon{
+                padding: 3px 8px 3px 8px;
+                border: 2px solid black;
+                color: black;
+            }
+            #sectiontwo{
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 30px;
+            }
+            #buttonnumber{
+                padding: 3px 8px 3px 8px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            #button{
+                padding: 3px 8px 3px 8px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            #buttonn{
+                padding: 3px 20px 3px 20px;
+                background-color: skyblue;
+                border: 2px solid black;
+            }
+            
+            /* FOOTER */
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }
+
+        /* TABLET */
+        @media screen and (min-width:426px)and (max-width:768px) {
+
+            /* Header */
+            .nav {
+               
+                width: 100%;
+                height: 100%;
+            }
+
+            .catalog {
+                width: 100%;
+                height: 1px;
+                display: flex;
+                justify-content: space-between;
+                gap: 5px;
+                align-content: center;
+                padding: 1px 5px 40px 5px ;
+
+            }
+
+            .navbar {
+                width: 100%;
+                height: 120px;
+                align-content: center;
+                /* background-image: url(./hero.jpg);
+                object-fit: cover;
+                background-size: 100% 100%;
+                background-repeat: no-repeat; */
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            /* MAIN */
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            #sectionone {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            section div {
+                
+                margin: 2px;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            /* FOOTER */
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }
+
+        /* LAPTOP */
+        @media screen and (min-width:769px)and (max-width:1024px) {
+
+            /* Header */
+            .nav {
+                width: 100%;
+                height: 100%;
+            }
+
+            .catalog {
+                width: 100%;
+                height: 25px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                align-content: center;
+                padding: 1px 5px 40px 5px ;
+
+            }
+            .navbar {
+                width: 100%;
+                height: 120px;
+                align-content: center;
+                /* background-image: url(./hero.jpg);
+                object-fit: cover;
+                background-size: 100% 100%;
+                background-repeat: no-repeat; */
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+
+            /* MAIN */
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            #sectionone {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 0px 10px 0px 10px;
+            }
+
+            section div {
+                
+                margin: 2px;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            /* FOOTER */
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }
+
+        /* LAPTOP-L */
+        @media screen and (min-width:1025px)and (max-width:1440px) {
+
+            /* Header */
+            .nav {
+                
+                width: 100%;
+                height: 100%;
+            }
+
+            .catalog {
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                align-content: center;
+            }
+
+            .navbar {
+                width: 100%;
+                height: 140px;
+                align-content: center;
+                /* background-image: url(./hero.jpg);
+                object-fit: cover;
+                background-size: 100% 100%;
+                background-repeat: no-repeat; */
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            /* MAIN */
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            #sectionone {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            section div {
+                
+                margin: 2px;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            /* FOOTER */
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }
+
+        /* 4K SCREEN */
+        @media screen and (min-width:1441px)and (max-width:2560px) {
+
+            /* Header */
+            .nav {
+                
+                width: 100%;
+                height: 100%;
+            }
+
+            .catalog {
+                
+                width: 100%;
+                height: 30px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                align-content: center;
+            }
+
+            .navbar {
+                width: 100%;
+                height: 140px;
+                align-content: center;
+                /* background-image: url(./hero.jpg);
+                object-fit: cover;
+                background-size: 100% 100%;
+                background-repeat: no-repeat; */
+            }
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            /* MAIN */
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            #sectionone {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            section div {
+                
+                margin: 2px;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            /* FOOTER */
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }
+
+        /* FOR ALL  */
+        /*@media {
+
+             Header 
+            .nav {
+                
+                width: 100%;
+                height: 100%;
+            }
+
+            .catalog {
+                
+                width: 100%;
+                height: 25px;
+                display: flex;
+                justify-content: space-between;
+                gap: 10px;
+                align-content: center;
+            }
+
+            .navbar {
+                width: 100%;
+                height: 100px;
+                align-content: center;
+            }
+
+            ul {
+                display: flex;
+                justify-content: center;
+            }
+
+            li {
+                list-style: none;
+                padding: 10px;
+            }
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+
+            .navbar {
+                background-image: url(./hero.jpg);
+                object-fit: cover;
+                background-size: 100% 100%;
+                background-repeat: no-repeat;
+            }
+
+            MAIN
+            main{
+                margin-top: 15%;
+            }
+            #heading {
+                display: flex;
+                justify-content: space-between;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            #sectionone {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+
+            section div {
+                
+                margin: 2px;
+            }
+
+            #sectiondiv {
+                display: flex;
+                justify-content: space-between;
+            }
+
+            #mainimage {
+                width: 100%;
+            }
+
+            FOOTER 
+            #sectionone-footer {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                width: 100%;
+                margin: 1% auto;
+                padding: 10px;
+            }
+        }*/
+    </style>
+    </head>
+
+    <body>
+        <header>
+            <nav class="nav">
+                <div class="catalog">
+                    <ul>
+                        <li><i class="fa-solid fa-film"></i></li>
+                        <li class="catalogname" id="blue">CatalogZ</li>
+                    </ul>
+                    <ul class="navbar-links">
+                        <!-- <input type="checkbox" class="menu-toggle"> -->
+                        <!-- <label for="#nav" class="menu-icon">&#9776;</label> -->
+                        <li><a href="catalogzPhotos.html"
+                                id="photos">Photos</a></li>
+                        <li><a href="catalogzVideos.html"
+                                id="videos">Videos</a></li>
+                        <li><a href="catalogzAbout.html"
+                                id="about">About</a></li>
+                        <li><a href="catalogzContact.html"
+                                id="contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="navbar">
+                    <form class="d-flex" role="search">
+                        <input class="input" type="search" placeholder="Search"
+                            aria-label="Search" id="searchbutton">
+                        <button class="btn" type="submit" id="searchbutton"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                    <video src="hero.mp4" autoplay loop muted
+                        class="video-bg"></video>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <section id="heading">
+                <div>
+                    <h1 id="blue">Latest Videos</h1>
+                </div>
+                <div>
+                    <p id="blue">Page <a href="nannap.html"><button
+                                id="buttonnumber" type="button">1</button></a>
+                        of 180</p>
+                </div>
+            </section>
+            <section id="sectionone">
+                <div id="one">
+                    <img src="./img-01.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="two">
+                    <img src="./img-02.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="three">
+                    <img src="./img-03.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="four">
+                    <img src="./img-04.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="five">
+                    <img src="./img-05.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="six">
+                    <img src="./img-06.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="seven">
+                    <img src="./img-07.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="eight">
+                    <img src="./img-08.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="nine">
+                    <img src="./img-09.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="ten">
+                    <img src="./img-10.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="eleven">
+                    <img src="./img-11.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="twele">
+                    <img src="./img-12.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="thirteen">
+                    <img src="./img-13.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="fourteen">
+                    <img src="./img-14.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="fifteen">
+                    <img src="./img-15.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+                <div id="sixteen">
+                    <img src="./img-16.jpg" alt="image" id="mainimage">
+                    <div id="sectiondiv">
+                        <p>24 oct 2020</p>
+                        <p>10,460 views</p>
+                    </div>
+                </div>
+            </section>
+            <section id="sectiontwo">
+                <div>
+                    <a href="nannap.html"><button type="button"
+                            id="button">Previous</button></a>
+                </div>
+                <div>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">1</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">2</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">3</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">4</button></a>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonnumber">5</button></a>
+                </div>
+                <div>
+                    <a href="nannap.html"><button type="button"
+                            id="buttonn">Next</button></a>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section id="sectionone-footer">
+                <div class="footerdiv">
+                    <h1 id="blue">About Catalog-Z</h1>
+                    <p> Catalog-Z is free Bootstrap 5 Alpha 2 HTML Template for
+                        video and photo websites. You can freely use
+                        this TemplateMo layout for a front end integration with
+                        any kind of CMS website.</p>
+                </div>
+                <div class="footerdiv">
+                    <h1 id="blue">Our Links</h1>
+                    <li><a href>Advertise</a></li>
+                    <li><a href>Support</a></li>
+                    <li><a href>Our Company</a></li>
+                    <li><a href>Contact</a></li>
+                </div>
+                <div class="footerdiv">
+                    <h1 id="blue">Emergency contact</h1>
+                    <li>
+                        <a href><i class="fa-brands fa-facebook"></i></a>
+                    </li>
+                    <li>
+                        <a href></a><i class="fa-brands fa-twitter"></i>
+                    </li>
+                    <li>
+                        <a href><i class="fa-brands fa-instagram"></i></a>
+                    </li>
+                    <li>
+                        <a href><i class="fa-brands fa-github"></i></a>
+                    </li>
+                    <li>Terms of Use</li>
+                    <li>Privacy Policy</li>
+                </div>
+            </section>
+            <section id="sectiontwo-footer">
+                <h3>&copyCopyright 2024 Catalog-Z Company.All rights
+                    reserved.</h3>
+                <p>Designed by Swarnalatha Bouthu</p>
+            </section>
+        </footer>
+    </body>
+
+</html>
